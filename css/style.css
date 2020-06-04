@@ -32,8 +32,135 @@ body{
 
     background-size: cover;
     background-position: top;
+    position: relative;
 
-    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); */
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+     /* clip-path: polygon(50% 0, 100% 100%, 0 100%);  */
     
+}
+
+.logo-box{
+    position: absolute;
+    top:40px;
+    left: 40px;
+}
+
+.logo{
+    height: 35px;
+}
+
+.text-box{
+    position:Absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary{
+    color:#fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+}
+
+.heading-primary-main{
+    display:block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+
+    animation-timing-function: ease-out;
+
+    /* animation-iteration-count: 3; */
+    /* animation-delay: 3s; */
+}
+
+.heading-primary-sub{
+    display:block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    margin-bottom: 20px;
+}
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInTop {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;    
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+
+    animation-name: moveInTop;
+    animation-duration: 1.5s;
+
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn-white{
+    background-color: white;
+    color:#777;
 }
