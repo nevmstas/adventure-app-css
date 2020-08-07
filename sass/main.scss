@@ -16,12 +16,13 @@
 
 @import "components/story";
 
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+@import "layout/navigation";
+
 @import "pages/home";
 
-@import "layout/header";
-
-@import "layout/grid";
-@import "layout/footer"
 
 
 
